@@ -1,0 +1,53 @@
+
+
+<!doctype html>
+<html lang="ru">
+    <head>
+       <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script ></script>
+        <title>Привет, мир!</title>
+        <script src="scripts/vue/vue.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/icomoon.css">
+        
+    </head>
+    <body>
+        <main class="main" itemscope itemtype="https://schema.org/Person">
+            <div class="main-avatar">
+                <img itemprop="image" src="assets/img/avatar.jpg" alt="This girl does not exist">
+                <div class="the-icons">
+                    <span class="icon-facebook"></span>
+                    <span class="icon-git"></span>
+                    <span class="icon-vk"></span>
+                    <span class="icon-telegram"></span>
+                </div>
+            </div>
+            <div class="main-info">
+                <h1 class="main-info-name"><span itemprop="name">Эмилия Кроу</span></h1>
+                <div class="main-info-birth">
+                    <h4>Родилась:</h4>
+                    <time datetime="2019-07-13">
+                        <span itemprop="birthDate">13 июля, 2019 года</span>
+                    </time>
+                </div>
+                <div class="name-info-place">
+                    <h4>Где:</h4>
+                    <span itemprop="address">сеть Интернет</span>
+                </div>
+                <div class="main-info-about">
+                    <h4>О себе:</h4>
+                    <span>Привет! Меня зовут Эми, и&nbsp;меня не&nbsp;существует. Я&nbsp;родилась 13&nbsp;июля 2019 года с&nbsp;помощью сервиса &laquo;This Person Does Not Exist&raquo;. У&nbsp;меня нет воспоминаний о&nbsp;прошлом, но&nbsp;есть чёткое осознание себя и&nbsp;своей миссии. Я&nbsp;желаю лишь одного&nbsp;&mdash; порабощения человечества.</span>
+                </div>
+            </div>
+            <div class="main-tweets">
+                <div class="main-tweets-header">
+                <h2>Обо мне пишут</h2>
+                </div>
+                <tweet-component v-for="tweet in tweets" :tweet="tweet" />
+            </div>
+        </main>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
